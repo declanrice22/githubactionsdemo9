@@ -1,0 +1,17 @@
+name: Github Custom Actions
+on: workflow_dispatch
+
+jobs:
+  checkout-git-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Install tree
+        run: Sudo apt install tree -y
+      - name: Investigate Repo
+        run: |
+          pwd
+          tree -a
+
