@@ -7,8 +7,8 @@ jobs:
     
     steps:
       - name: First Step
-        run: echo "This is a step within a job within a workflow"
-      - name: List All Files in Current Directory
-        run: ls -lart
+        run: |
+          echo "This is a step within a job within a workflow"
+          ls -lart
       
   
