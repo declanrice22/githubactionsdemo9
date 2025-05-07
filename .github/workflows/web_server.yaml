@@ -16,9 +16,9 @@ jobs:
         run: python3 -c "import requests; r = requests.get('http://localhost:80'); print(r.status_code)"
 
   testing-api-availability:
-    needs: [clone-website-and-test-service]
+    needs: [clone-website-and-run-podman]
     runs-on: ubuntu-latest
 
     steps:
       - name: Ping the Service
-        run: ping 8.8.8.8 -n 10
+        run: ping -c 10 8.8.8.8
