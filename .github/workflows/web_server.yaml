@@ -1,0 +1,14 @@
+name: Github Custom on push
+on: workflow_dispatch
+
+jobs:
+  clone-website-and-run-podman:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Git Clone Repo
+        run: git clone https://github.com/declanrice22/website1.git
+      - name: Check Website Files
+        run: ls -lart
+        
